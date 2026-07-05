@@ -1,4 +1,4 @@
-# 🚀 SignFlow - Low-Code API Orchestration Platform
+#  SignFlow - Low-Code API Orchestration Platform
 
 A Configuration-Driven Low-Code API Orchestration Platform developed as part of the **Signzy Software Development Engineer Internship Assignment**.
 
@@ -6,7 +6,7 @@ The platform enables dynamic API creation, request validation, request transform
 
 ---
 
-# ✨ Features
+#  Features
 
 - Dynamic API Creation using JSON Configuration
 - Configuration Driven Workflow Engine
@@ -22,7 +22,7 @@ The platform enables dynamic API creation, request validation, request transform
 
 ---
 
-# 🛠 Tech Stack
+#  Tech Stack
 
 ### Backend
 - Node.js
@@ -43,7 +43,7 @@ The platform enables dynamic API creation, request validation, request transform
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 SignFlow
@@ -65,7 +65,7 @@ SignFlow
 
 ---
 
-# ⚙️ Workflow
+#  Workflow
 
 ```
 Client Request
@@ -96,7 +96,7 @@ Client Response
 
 ---
 
-# 📡 APIs
+#  APIs
 
 ## POST /api/verify-pan
 
@@ -119,7 +119,7 @@ Returns workflow execution history stored in PostgreSQL.
 
 ---
 
-# 📄 Swagger
+#  Swagger
 
 Swagger Documentation
 
@@ -129,7 +129,7 @@ http://localhost:3000/api-docs
 
 ---
 
-# 📁 Sample Configurations
+# Sample Configurations
 
 The project contains sample workflow configurations for
 
@@ -162,7 +162,7 @@ Stores
 
 ---
 
-# 🔁 Execution Flow
+#  Execution Flow
 
 1. Client sends request
 2. Validation Middleware validates request
@@ -175,7 +175,7 @@ Stores
 
 ---
 
-# 📷 Screenshots
+#  Screenshots
 
 (Add screenshots before submission)
 
@@ -185,7 +185,7 @@ Stores
 
 ---
 
-# 📌 Future Enhancements
+#  Future Enhancements
 
 - API Key Authentication
 - Docker Support
@@ -195,7 +195,7 @@ Stores
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 **Sasi Sai Tulasi Ghanta**
 
