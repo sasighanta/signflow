@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SignFlow API Orchestration Platform",
+    "version": "1.0.0",
+    "description": "Configuration-Driven Low-Code API Orchestration Platform developed for the Signzy SDE Internship Assignment."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Workflow APIs",
+      "description": "Execute configured workflows"
+    },
+    {
+      "name": "Execution Logs",
+      "description": "Retrieve workflow execution history"
+    }
+  ],
+  "paths": {
+    "/api/verify-pan": {
+      "post": {
+        "tags": [
+          "Workflow APIs"
+        ],
+        "summary": "Execute PAN Verification Workflow",
+        "description": "Runs the PAN verification workflow using configured vendors, performs request validation, mapping, orchestration and response transformation.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "pan": "ABCDE1234F",
+                "name": "Sasi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Workflow executed successfully"
+          },
+          "400": {
+            "description": "Validation failed"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/executions": {
+      "get": {
+        "tags": [
+          "Execution Logs"
+        ],
+        "summary": "Get Execution History",
+        "description": "Returns execution history stored in PostgreSQL.",
+        "responses": {
+          "200": {
+            "description": "Execution history retrieved successfully"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}

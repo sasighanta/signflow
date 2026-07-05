@@ -1,0 +1,22 @@
+{
+  "name": "Aadhaar Verification",
+  "endpoint": "/verify-aadhaar",
+  "method": "POST",
+  "validation": {
+    "required": ["aadhaarNumber", "name"]
+  },
+  "workflow": [
+    {
+      "vendor": "AadhaarVendor",
+      "url": "http://localhost:4003/vendorAadhaar",
+      "mapping": {
+        "aadhaarNumber": "aadhaar_id",
+        "name": "full_name"
+      },
+      "transform": {
+        "status": "result.status",
+        "verified": "result.valid"
+      }
+    }
+  ]
+}

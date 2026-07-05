@@ -1,0 +1,47 @@
+{
+  "apis": [
+    {
+      "name": "PAN Verification",
+      "endpoint": "/verify-pan",
+      "method": "POST",
+
+      "validation": {
+        "required": ["pan", "name"]
+      },
+
+      "workflow": [
+        {
+          "vendor": "VendorA",
+          "url": "http://localhost:4000/vendorA",
+
+          "mapping": {
+            "pan": "panNumber",
+            "name": "fullName"
+          },
+
+          "transform": {
+            "status": "result.status",
+            "verified": "result.valid",
+             "vendor": "result.vendor"
+          }
+        },
+
+        {
+          "vendor": "VendorB",
+          "url": "http://localhost:4001/vendorB",
+
+          "mapping": {
+            "pan": "pan_id",
+            "name": "customer_name"
+          },
+
+          "transform": {
+            "status": "result.code",
+            "verified": "result.verification",
+            "vendor": "response.source"
+          }
+        }
+      ]
+    }
+  ]
+}

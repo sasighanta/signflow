@@ -1,0 +1,22 @@
+{
+  "name": "GST Verification",
+  "endpoint": "/verify-gst",
+  "method": "POST",
+  "validation": {
+    "required": ["gstNumber", "businessName"]
+  },
+  "workflow": [
+    {
+      "vendor": "GSTVendor",
+      "url": "http://localhost:4002/vendorGST",
+      "mapping": {
+        "gstNumber": "gst_id",
+        "businessName": "company_name"
+      },
+      "transform": {
+        "status": "result.status",
+        "verified": "result.valid"
+      }
+    }
+  ]
+}
